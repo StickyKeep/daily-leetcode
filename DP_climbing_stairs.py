@@ -6,6 +6,30 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 https://leetcode.com/problems/climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming
 """
 
+# Memoization
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        def stairbonacci(n, stair_dict={}):
+            if n in stair_dict:
+                return stair_dict[n]
+            if n == 0:
+                return 0
+            if n == 1:
+                return 1
+            if n == 2:
+                return 2
+            stair_dict[n] = stairbonacci(n-1, stair_dict) + stairbonacci(n-2, stair_dict)
+            return stair_dict[n]
+        return stairbonacci(n)
+    
+# Runtime 30ms
+# Beats 95.09% of users with Python3    
+
+### ------
+
+# Tabular
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         if n == 0: 
