@@ -12,17 +12,17 @@ class Solution:
     def fib(self, n: int) -> int:
         if n == 0:
             return 0
-        if n == 1: 
-           return 1
+        if n == 1:
+            return 1
         if n == 2:
-           return 1
-        tab = [0] * n
-        tab[0] = 1
+            return 1
+        tab = [0] * (n + 1)
         tab[1] = 1
-        for n in range(1, n):
-            tab[n] = tab[n-1] + tab[n-2]
+
+        for i in range(2, n + 1):
+            tab[i] = tab[i - 1] + tab[i - 2]
+
         return tab[n]
-    
 
 # Runtime 44ms
 # Beats 54.34% of users with Python3

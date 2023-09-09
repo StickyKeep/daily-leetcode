@@ -11,20 +11,22 @@ class Solution:
     def tribonacci(self, n: int) -> int:
         if n == 0:
             return 0
-        if n == 1: 
+        if n == 1:
             return 1
         if n == 2:
             return 1
         if n == 3:
             return 2
-            
-        tab = [0] * n
-        tab[0] = 1
-        tab[1] = 1
         
-        for n in range(1, n):
-            tab[n] = tab[n-1] + tab[n-2] + tab[n-3]
+        tab = [0] * (n + 1)
+        tab[1] = 1
+        tab[2] = 1
+
+        for i in range(3, n + 1):
+            tab[i] = tab[i - 1] + tab[i - 2] + tab[i - 3]
+
         return tab[n]
+
         
 # Runtime 44ms
 # Beats 31.00%of users with Python3
