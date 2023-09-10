@@ -24,7 +24,7 @@ class Solution:
 
         return tab[n]
 
-# Runtime 44ms
-# Beats 54.34% of users with Python3
-# Memory 16.36MB
-# Beats 22.23%of users with Python3
+# Runtime 32ms
+# Beats 94.71%of users with Python3
+# Memory 16.27MB
+# Beats 61.49%of users with Python3

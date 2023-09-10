@@ -26,6 +26,9 @@ class Solution:
 # Runtime 30ms
 # Beats 95.09% of users with Python3    
 
+# Memory 16.30MB
+# Beats 27.12% of users with Python3
+
 ### ------
 
 # Tabular
