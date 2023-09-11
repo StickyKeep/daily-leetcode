@@ -19,6 +19,7 @@ class Solution:
 
         for i in range(2, len(cost)):
             dp_cost[i] = cost[i] + min(dp_cost[i-1], dp_cost[i-2])
+            
         return min(dp_cost[-1], dp_cost[-2])
         
 
